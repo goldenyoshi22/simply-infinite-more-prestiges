@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMP: Simply Infinite More Prestiges</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="js/jQuery.min.js"></script>
+    <script src="js/OmegaNum.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+<body>
+<span id="ptext">
+<span class="nobr">P<span class="supsub">0<br>0</span></span>
+</span>
+<button onclick="if(game.P.length > 1) game.P[0] = game.P[0].plus(on.sqrt(game.P[1].plus(1).pow(2.5))); else game.P[0] = game.P[0].plus(1)" style="width:50%;height:20%;font-size:42px;position:absolute;bottom:0;left:0;color:#000000;background-color:#FF0000;">Get a P<sub>0</sub></button>
+<button onclick="prestige((game.pmode ? maxPrestige() : game.prestigeaim))" style="width:40%;height:20%;font-size:42px;position:absolute;bottom:0;left:50%;color:#000000;background-color:#0000FF;">Prestige for a P<sub id="p">1</sub></button>
+<button id="pmode" onclick="game.pmode = Number(!game.pmode)" style="width:10%;height:20%;font-size:30px;position:absolute;bottom:0;left:90%;color:#000000;background-color:#0000FF;">Mode:<br>Custom</button>
+<button id="cm" onclick="z=prompt('Input the layer you would like to prestige to.');if(!isNaN(parseFloat(z))){game.prestigeaim=Math.floor(parseFloat(z))}" style="width:10%;height:10%;font-size:30px;position:absolute;bottom:20%;left:90%;color:#000000;background-color:#0000FF;">Set</button>
+</body>
+</html>
